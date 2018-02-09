@@ -1,19 +1,27 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 
-class ComponentName extends PureComponent {
-	static propTypes = {
+
+class TopicsList extends PureComponent {
+  static propTypes = {
     topics: PropTypes.arrayOf(PropTypes.shape({
-		topic: PropTypes.string.isRequired,
-		count: PropTypes.number.isRequired
-	})).isRequired
-	}
+      topic: PropTypes.string.isRequired,
+      count: PropTypes.number.isRequired
+    })).isRequired
+  }
 
-	render() {
-		return (
-			
-		)
-	}
-}
+  renderTopic(topic) {
+    return (
+      <li key={topic.topic} > {topic.topic} ({topic.count}) </li>
+    )}
 
-export default ComponentName
+    render(){
+      return (
+        <ol>
+          {this.props.topics.map(this.renderTopic)}
+        </ol>
+      )
+    }
+  }
+
+  export default TopicsList
