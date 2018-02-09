@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 import RsvpItem from './RsvpItem'
+import { connect } from 'react-redux'
 
 
 class RsvpList extends PureComponent {
@@ -22,5 +23,8 @@ class RsvpList extends PureComponent {
     )
   }
 }
+const mapStateToProps = ({ rsvps }) => ({
+  rsvps
+})
 
-export default RsvpList
+export default connect(mapStateToProps)(RsvpList)
