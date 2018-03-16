@@ -48,9 +48,13 @@ class App extends PureComponent {
   render() {
     return (
       <div className="App">
-        <Title content="Top 10 " />
-        <TopicsList topics={topics}  />
-        <RsvpList rsvps={rsvps}  />
+         <Title content="Top 10 " />
+        <div>
+          <main>
+           <TopicsList/>
+           <RsvpList />
+          </main>
+        </div>
       </div>
     )
   }
@@ -256,9 +260,6 @@ const rsvps = [
 ]
 
 const rsvp = rsvps[0]
-
-
-
 
 
 export default App

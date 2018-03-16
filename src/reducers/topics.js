@@ -7,7 +7,7 @@ export default function (state = [], { type, payload } = {}) {
     case UPDATE_TOPICS :
       return [...payload]
 
-    default :
+    default:
       return state
   }
 }

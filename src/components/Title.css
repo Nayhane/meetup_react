@@ -1,0 +1,14 @@
+.Title {
+  background-image: url("http://www.weareonechurch.com/wp-content/uploads/2014/07/events-3720x1200-1024x330.jpg");
+  background-repeat: no-repeat;
+  background-size: 1500px;
+  padding-bottom: 50px;
+  height: 120px;
+  color: #000000;
+  font-size: 2rem;
+}
+
+h1 {
+  margin: auto;
+
+}
